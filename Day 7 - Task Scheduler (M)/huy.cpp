@@ -14,4 +14,17 @@ public:
         
         return max(int(tasks.size()), (m-1)*(n+1) + mc);
     }
+    // 2nd Method
+    int leastInterval(vector<char>& tasks, int n) {
+        int cnt[26] = {0};
+        for(char x:tasks) 
+            cnt[x-'A']++;
+        sort(cnt,cnt+26,greater<int>());
+        int m = cnt[0] - 1;
+        int idle = m*n; // maximum need for idle state
+        for(int i=1;i<26;i++)
+            idle-=min(m,cnt[i]);
+        
+        return tasks.size() + max(idle,0);
+    }
 };
