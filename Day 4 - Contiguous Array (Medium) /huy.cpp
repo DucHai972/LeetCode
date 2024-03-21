@@ -1,7 +1,7 @@
+// <pfsum>
 // can use array instead of map to improve run time (but may increase mem)
 class Solution {
 public:
-
     int findMaxLength(vector<int>& nums) {
         int n = nums.size();
         int s=0,res=0;

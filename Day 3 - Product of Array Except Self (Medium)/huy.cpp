@@ -1,3 +1,4 @@
+// <math> <impl>
 // quite clumsy, not optimized than the "Prefix suffix product array " solution of Hieu :D
 class Solution {
 public:
